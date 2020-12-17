@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    var h =$('body').height();
+    $(window).resize(function () { 
+        $('body').height(h);
+    });
     // 轉盤開始<->停止
     var click;
     click=true;
