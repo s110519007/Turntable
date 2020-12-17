@@ -166,7 +166,8 @@
     margin-left: .8vw;
   }
   .container .form-wrap-m {
-    position: absolute;
+    margin: 0;
+    position: relative;
     width: 100vw;
     height: 100vh;
     bottom: 0;
@@ -392,7 +393,7 @@
   .container .form-wrap .input input {
     margin: 2vw 0;
     height: 10vw;
-    font-size: 2vw;
+    font-size: 4vw;
     background-color: #fff;
     border-radius: 18%/100%;
   }
@@ -406,7 +407,8 @@
     margin-left: 1vw;
   }
   .container .form-wrap-m {
-    position: absolute;
+    margin: 0;
+    position: relative;
     width: 100vw;
     height: 100vh;
     bottom: 0;

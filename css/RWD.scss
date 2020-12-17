@@ -2,7 +2,7 @@ $l-width:1025px;
 $m-width:1024px;
 $ms-width:768px;
 $s-width:767px;
-
+//pad
 @media screen and (max-width:$m-width) and (min-width:$ms-width) {
     $center: translate(-50%,-50%);
     $turntable-size:75vw;
@@ -160,7 +160,8 @@ $s-width:767px;
             }
         }
         .form-wrap-m{
-            position: absolute;
+            margin: 0;
+            position: relative;
             width: 100vw;
             height: 100vh;
             bottom: 0;
@@ -239,6 +240,7 @@ $s-width:767px;
         }
     }
 }
+//phone
 @media screen and (max-width:$s-width){
     $center: translate(-50%,-50%);
     $turntable-size:85vw;
@@ -380,7 +382,7 @@ $s-width:767px;
                 input{
                     margin: 2vw 0;
                     height: 10vw;
-                    font-size: 2vw;
+                    font-size: 4vw;
                     background-color: #fff;
                     border-radius: 18%/100%;
                     &[type=number]{
@@ -396,7 +398,8 @@ $s-width:767px;
             }
         }
         .form-wrap-m{
-            position: absolute;
+            margin: 0;
+            position: relative;
             width: 100vw;
             height: 100vh;
             bottom: 0;
