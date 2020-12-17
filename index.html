@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/RWD.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>隨機轉盤</title>
+</head>
+<body>
+    <div class="container">
+        <div class="turntable">
+            <div class="pin"></div>
+            <div class="cursor"></div>
+        </div>
+        <div class="form-wrap">
+            <form id="form" name="form" class="input">
+                <div class="options"></div>
+                <input type="number" autocomplete="off" id="num" name="num" min="2" max="8" step="1" placeholder="請輸入 2 ~ 8 的選項數量" required>
+                <input type="button" class="num_change" value="修改">
+                <div class="btn">
+                    <div class="btn-border"></div>
+                </div>
+            </form>
+        </div>
+        <div class="option-bg-wrap">
+            <div class="option-bg"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

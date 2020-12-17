@@ -1,0 +1,476 @@
+$l-width:1025px;
+$m-width:1024px;
+$ms-width:768px;
+$s-width:767px;
+
+@media screen and (max-width:$m-width) and (min-width:$ms-width) {
+    $center: translate(-50%,-50%);
+    $turntable-size:75vw;
+    $cursor-width:4vw;
+    $btn-size:30vw;
+    @mixin changeTurntable {
+        width: $turntable-size;
+        height: $turntable-size;
+    }
+    @mixin changeCursor {
+        border-top: $cursor-width*5 solid #000;
+        border-left: $cursor-width solid transparent;
+        border-right: $cursor-width solid transparent;
+    }
+    @mixin changeBtn {
+        width: $btn-size;
+        height: $btn-size/3;
+    }
+    //container 開始
+    .container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .turntable{
+            @include changeTurntable();
+            &::before,&::after{
+                @include changeTurntable();
+            }
+            .pin{
+                @include changeTurntable();
+                width: $turntable-size/15;
+                height: $turntable-size/15;
+                &::before{
+                    @include changeTurntable();
+                    width: $turntable-size/15*.8;
+                    height: $turntable-size/15*.8;
+                }
+                &::after{
+                    width: $turntable-size/15*.2;
+                    height: $turntable-size/15;
+                }
+            }
+            .cursor{
+                @include changeCursor();
+                &::before{
+                    margin-left: -$cursor-width;
+                    transform: translate(10%,-120%);
+                    margin-left: -$cursor-width;
+                    width: $cursor-width*1.8;
+                    height: $cursor-width*4;
+                }
+                &::after{
+                    @include changeCursor();
+                    $scale:.3;
+                    border: none;
+                    width: $cursor-width*$scale;
+                    height: $cursor-width*$scale*1.5;
+                }
+                @keyframes cursor-border {
+                    0%{
+                        transform: translateY(-$cursor-width*5) skewX(15deg);
+                        margin-left: -$cursor-width*.9;
+                    }
+                    33%{
+                        transform: translateY(-$cursor-width*1.2);
+                        margin-left: -$cursor-width*.15;
+                    }
+                    67%{
+                        transform: translateY(-$cursor-width*5) skewX(-15deg);
+                        margin-left: $cursor-width*.6;
+                    }
+                    100%{
+                        transform: translateY(-$cursor-width*5) skewX(15deg);
+                        margin-left: -$cursor-width*.9;
+                    }
+                }
+            }
+        }
+        .form-wrap{
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            .input{
+                .options{
+                    width: 100%;
+                    display: none;
+                }
+                .btn-click{
+                    &::after{
+                        font-size: $btn-size/3*.6;
+                    }
+                }
+                .btn{
+                    &::before{
+                        font-size: $btn-size/3*.6;
+                    }
+                }
+                .btn,.btn-click{
+                    @include changeBtn();
+                    margin-top: 2vw;
+                    .btn-border{
+                        @include changeBtn();
+                        @mixin changeBlock {
+                            width: $btn-size/20;
+                            height: $btn-size/20;
+                        }
+                        &::before{
+                            @include changeBlock();
+                        }
+                        &::after{
+                            @include changeBlock();
+                        }
+                    }
+                    &:hover{
+                        background-color: #000;
+                        &::before,&::after{
+                            color: #fff;
+                        }
+                        .btn-border{
+                            border-color: #fff;
+                            &::before,&::after{
+                                background-color: #000;
+                            }
+                        }
+                    }
+                    &:active{
+                        background-color: #fff;
+                        &::before,&::after{
+                            color: #000;
+                        }
+                        .btn-border{
+                            border-color: #000;
+                            &::before,&::after{
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+                input{
+                    margin: 1vw 0;
+                    height: 6vw;
+                    font-size: 2vw;
+                    background-color: #fff;
+                    border-radius: 18%/100%;
+                    &[type=number]{
+                        width: 73%;
+                    }
+                    &[type=button]{
+                        cursor: pointer;
+                        width: 6vw;
+                        height: 6vw;
+                        margin-left: .8vw;
+                    }
+                }
+            }
+        }
+        .form-wrap-m{
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(#000,.3);
+            z-index: 10;
+            .input{
+                position: absolute;
+                width: 60%;
+                bottom: 3%;
+                right: 20%;
+                left: 20%;
+                .options{
+                    display: flex;
+                    width: 100%;
+                }
+                .btn-click{
+                    &::after{
+                        font-size: $btn-size/3*.6;
+                    }
+                }
+                .btn{
+                    &::before{
+                        font-size: $btn-size/3*.6;
+                    }
+                }
+                .btn,.btn-click{
+                    @include changeBtn();
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-top: 3vw;
+                    .btn-border{
+                        @include changeBtn();
+                        @mixin changeBlock {
+                            width: $btn-size/20;
+                            height: $btn-size/20;
+                        }
+                        &::before{
+                            @include changeBlock();
+                        }
+                        &::after{
+                            @include changeBlock();
+                        }
+                    }
+                }
+                input{
+                    margin: 1vw 0;
+                    height: 10vw;
+                    font-size: 2vw;
+                    background-color: #fff;
+                    border-radius: 18%/100%;
+                    &[type=number]{
+                        width: 78%;
+                    }
+                    &[type=button]{
+                        cursor: pointer;
+                        width: 10vw;
+                        height: 10vw;
+                        margin-left: 1vw;
+                    }
+                }
+            }
+        }
+        .option-bg-wrap{
+            .option-bg{
+                @include changeTurntable();
+                .cover{
+                    .name{
+                        span{
+                            font-size: 6vw;
+                            line-height: $turntable-size/2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:$s-width){
+    $center: translate(-50%,-50%);
+    $turntable-size:85vw;
+    $cursor-width:5vw;
+    $btn-size:40vw;
+    @mixin changeTurntable {
+        width: $turntable-size;
+        height: $turntable-size;
+    }
+    @mixin changeCursor {
+        border-top: $cursor-width*5 solid #000;
+        border-left: $cursor-width solid transparent;
+        border-right: $cursor-width solid transparent;
+    }
+    @mixin changeBtn {
+        width: $btn-size;
+        height: $btn-size/3;
+    }
+    //container 開始
+    .container{
+        .turntable{
+            @include changeTurntable();
+            &::before,&::after{
+                @include changeTurntable();
+            }
+            .pin{
+                @include changeTurntable();
+                width: $turntable-size/15;
+                height: $turntable-size/15;
+                &::before{
+                    @include changeTurntable();
+                    width: $turntable-size/15*.8;
+                    height: $turntable-size/15*.8;
+                }
+                &::after{
+                    width: $turntable-size/15*.2;
+                    height: $turntable-size/15;
+                }
+            }
+            .cursor{
+                @include changeCursor();
+                &::before{
+                    margin-left: -$cursor-width;
+                    transform: translate(10%,-120%);
+                    margin-left: -$cursor-width;
+                    width: $cursor-width*1.8;
+                    height: $cursor-width*4;
+                }
+                &::after{
+                    @include changeCursor();
+                    $scale:.3;
+                    border: none;
+                    width: $cursor-width*$scale;
+                    height: $cursor-width*$scale*1.5;
+                }
+                @keyframes cursor-border {
+                    0%{
+                        transform: translateY(-$cursor-width*5) skewX(15deg);
+                        margin-left: -$cursor-width*.9;
+                    }
+                    33%{
+                        transform: translateY(-$cursor-width*1.2);
+                        margin-left: -$cursor-width*.15;
+                    }
+                    67%{
+                        transform: translateY(-$cursor-width*5) skewX(-15deg);
+                        margin-left: $cursor-width*.6;
+                    }
+                    100%{
+                        transform: translateY(-$cursor-width*5) skewX(15deg);
+                        margin-left: -$cursor-width*.9;
+                    }
+                }
+            }
+        }
+        .form-wrap{
+            position: absolute;
+            width: 70%;
+            bottom: 5%;
+            right: 15%;
+            .input{
+                .options{
+                    width: 100%;
+                    display: none;
+                }
+                .btn-click{
+                    &::after{
+                        font-size: $btn-size/3*.6;
+                    }
+                }
+                .btn{
+                    &::before{
+                        font-size: $btn-size/3*.6;
+                    }
+                }
+                .btn,.btn-click{
+                    @include changeBtn();
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-top: 2vw;
+                    .btn-border{
+                        @include changeBtn();
+                        @mixin changeBlock {
+                            width: $btn-size/20;
+                            height: $btn-size/20;
+                        }
+                        &::before{
+                            @include changeBlock();
+                        }
+                        &::after{
+                            @include changeBlock();
+                        }
+                    }
+                    &:hover{
+                        background-color: #000;
+                        &::before,&::after{
+                            color: #fff;
+                        }
+                        .btn-border{
+                            border-color: #fff;
+                            &::before,&::after{
+                                background-color: #000;
+                            }
+                        }
+                    }
+                    &:active{
+                        background-color: #fff;
+                        &::before,&::after{
+                            color: #000;
+                        }
+                        .btn-border{
+                            border-color: #000;
+                            &::before,&::after{
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+                input{
+                    margin: 2vw 0;
+                    height: 10vw;
+                    font-size: 2vw;
+                    background-color: #fff;
+                    border-radius: 18%/100%;
+                    &[type=number]{
+                        width: 74%;
+                    }
+                    &[type=button]{
+                        cursor: pointer;
+                        width: 12vw;
+                        height: 12vw;
+                        margin-left: 1vw;
+                    }
+                }
+            }
+        }
+        .form-wrap-m{
+            width: 100vw;
+            height: 100vh;
+            bottom: 0;
+            right: 0;
+            transform: translateX(0);
+            background-color: rgba(#000,.3);
+            z-index: 10;
+            .input{
+                position: absolute;
+                width: 75%;
+                bottom: 3%;
+                right: 12.5%;
+                left: 12.5%;
+                .options{
+                    display: flex;
+                    width: 100%;
+                }
+                .btn-click{
+                    &::after{
+                        font-size: $btn-size/3*.6;
+                    }
+                }
+                .btn{
+                    &::before{
+                        font-size: $btn-size/3*.6;
+                    }
+                }
+                .btn,.btn-click{
+                    @include changeBtn();
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-top: 3vw;
+                    .btn-border{
+                        @include changeBtn();
+                        @mixin changeBlock {
+                            width: $btn-size/20;
+                            height: $btn-size/20;
+                        }
+                        &::before{
+                            @include changeBlock();
+                        }
+                        &::after{
+                            @include changeBlock();
+                        }
+                    }
+                }
+                input{
+                    margin: 1.5vw 0;
+                    height: 10vw;
+                    font-size: 2vw;
+                    background-color: #fff;
+                    border-radius: 15%/100%;
+                    &[type=number]{
+                        width: 77%;
+                    }
+                    &[type=button]{
+                        cursor: pointer;
+                        width: 12vw;
+                        height: 12vw;
+                        margin-left: 1vw;
+                    }
+                }
+            }
+        }
+        .option-bg-wrap{
+            .option-bg{
+                @include changeTurntable();
+                .cover{
+                    .name{
+                        span{
+                            font-size: 6vw;
+                            line-height: $turntable-size/2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,313 @@
+::selection{
+    background-color: #7A7A7A;
+    color: #fff;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #7A7A7A;
+    font-family: Microsoft JhengHei;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+}
+input{
+    outline: none;
+}
+@import 'mixin';
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #7A7A7A;
+    .turntable{
+        @include turntable();
+        z-index: 5;
+        box-shadow: $shadow;
+        &::before{
+            content: '';
+            @include turntable();
+            transform: $center scale(.85);
+            border: 1px solid #000;
+        }
+        &::after{
+            content: '';
+            @include turntable();
+            transform: $center scale(.95);
+            background: url(../img/text.svg) no-repeat;
+            background-size: contain;
+        }
+        .pin{
+            @include turntable();
+            width: $turntable-size/15;
+            height: $turntable-size/15;
+            overflow: hidden;
+            background-color: #000;
+            &::before{
+                content: '';
+                @include turntable();
+                width: $turntable-size/15*.8;
+                height: $turntable-size/15*.8;
+                border: 1px solid #fff;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: $turntable-size/15*.2;
+                height: $turntable-size/15;
+                background-color:#000;
+                animation: pin-border 1.5s ease-in-out alternate infinite;
+            }
+            @keyframes pin-border {
+                0%{
+                    transform: translateX(-50%) rotate(0);
+                }
+                100%{
+                    transform: translateX(-50%) rotate(180deg);
+                }
+            }
+        }
+        .cursor{
+            @include cursor;
+            position: absolute;
+            &::before{
+                content: '';
+                position: absolute;
+                margin-left: -$cursor-width;
+                transform: translate(10%,-120%);
+                margin-left: -$cursor-width;
+                width: $cursor-width*1.8;
+                height: $cursor-width*4;
+                background: url(../img/cursor_deco.svg) no-repeat;
+                background-size: contain;
+            }
+            &::after{
+                @include cursor;
+                $scale:.3;
+                content: '';
+                position: absolute;
+                border: none;
+                width: $cursor-width*$scale;
+                height: $cursor-width*$scale*1.5;
+                background-color: #000;
+                animation: cursor-border 1s linear infinite;
+            }
+            @keyframes cursor-border {
+                0%{
+                    transform: translateY(-$cursor-width*5) skewX(15deg);
+                    margin-left: -$cursor-width*.9;
+                }
+                33%{
+                    transform: translateY(-$cursor-width*1.2);
+                    margin-left: -$cursor-width*.15;
+                }
+                67%{
+                    transform: translateY(-$cursor-width*5) skewX(-15deg);
+                    margin-left: $cursor-width*.6;
+                }
+                100%{
+                    transform: translateY(-$cursor-width*5) skewX(15deg);
+                    margin-left: -$cursor-width*.9;
+                }
+            }
+        }
+    }
+    .form-wrap{
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        .input{
+            .options{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .btn-click{
+                &::after{
+                    content: 'STOP';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: $center;
+                    color: #fff;
+                    font-size: $btn-size/3*.6;
+                    text-align: center;
+                }
+            }
+            .btn{
+                &::before{
+                    content: 'START';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: $center;
+                    color: #fff;
+                    font-size: $btn-size/3*.6;
+                    text-align: center;
+                }
+            }
+            .btn,.btn-click{
+                @include btn();
+                position: relative;
+                margin-top: 2vw;
+                background-color: #000;
+                box-shadow: $shadow;
+                cursor: pointer;
+                transition: all .3s;
+                &:hover{
+                    background-color: #fff;
+                    &::before,&::after{
+                        color: #000;
+                    }
+                    .btn-border{
+                        border-color: #000;
+                        &::before,&::after{
+                            background-color: #fff;
+                        }
+                    }
+                }
+                .btn-border{
+                    @include btn();
+                    top: 50%;
+                    left: 50%;
+                    transform: $center scale(.9,.8);
+                    border: 1px solid #fff;
+                    @mixin block {
+                        content: '';
+                        position: absolute;
+                        width: $btn-size/20;
+                        height: $btn-size/20;
+                        background-color: #000;
+                    }
+                    &::before{
+                        @include block();
+                        left: 10%;
+                        top: -10%;
+                        animation: btn-border 2s ease-in-out infinite alternate;
+                    }
+                    &::after{
+                        @include block();
+                        left: 85%;
+                        bottom: -10%;
+                        animation: btn-border 2s ease-in-out infinite alternate-reverse;
+                    }
+                    @keyframes btn-border {
+                        0%{
+                            left: 10%;
+                        }
+                        100%{
+                            left: 85%;
+                        }
+                    }
+                }
+            }
+            input{
+                transition: all.3s;
+                margin: .3vw 0;
+                height: 2.5vw;
+                border: none;
+                border-radius: 15%/100%;
+                text-align: center;
+                box-shadow: $shadow;
+                color: #000;
+                font-size: .8vw;
+                background-color: #fff;
+                &[type=number]{
+                    width: 74%;
+                    border-radius: 20%/100%;
+                }
+                &[type=button]{
+                    cursor: pointer;
+                    width: 3vw;
+                    height: 3vw;
+                    margin-left: .3vw;
+                    border-radius: 100%/100%;
+                    &:hover{
+                        background-color: #aaa;
+                        color: #fff;
+                        border: 1px solid #fff;
+                    }
+                }
+                &:focus{
+                    border: 1px solid #fff;
+                    background-color: #aaa;
+                    color: #fff;
+                }
+                &:read-only{
+                    cursor: default;
+                    border: 1px solid #fff;
+                    background-color: #aaa;
+                    color: rgba($color: #fff, $alpha: .5);
+                }
+            }
+        }
+    }
+    .option-bg-wrap{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        .option-bg{
+            @include turntable();
+            transition: all .3s;
+            animation: spin .3s linear infinite;
+            animation-play-state: paused;
+            background-color: #fff;
+            @keyframes spin {
+                0%{
+                    transform: $center rotate(0);
+                }
+                45%{
+                    transform: $center rotate(175deg);
+                }
+                55%{
+                    transform: $center rotate(185deg);
+                }
+                100%{
+                    transform: $center rotate(360deg);
+                }
+            }
+            .cover{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 50%;
+                border-radius: 100% 100% 0 0/200% 200% 0 0;
+                transform-origin: 50% 100%;
+                overflow: hidden;
+                .part{
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100% 100% 0 0/200% 200% 0 0;
+                    transform-origin: 50% 100%;
+                }
+                .name{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    transform-origin: 50% 100%;
+                    span{
+                        position: absolute;
+                        left: 25%;
+                        width: 50%;
+                        transform-origin: 50% 100%;
+                        font-size: 3vw;
+                        color: #000;
+                        text-align: center;
+                        line-height: $turntable-size/2;
+                    }
+                }
+            }
+        }
+    }
+}

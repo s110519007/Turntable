@@ -1,0 +1,33 @@
+$center: translate(-50%,-50%);
+$shadow: 10px 10px 10px rgba($color: #000, $alpha: .15);
+$turntable-size:40vw !default;
+$cursor-width:2vw !default;
+$btn-size:15vw !default;
+@mixin turntable {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: $center;
+    width: $turntable-size;
+    height: $turntable-size;
+    border-radius: 100%;
+}
+
+@mixin cursor {
+    position: absolute;
+    left: 50%;
+    top: -2%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-top: $cursor-width*5 solid #000;
+    border-left: $cursor-width solid transparent;
+    border-right: $cursor-width solid transparent;
+}
+
+@mixin btn {
+    position: absolute;
+    width: $btn-size;
+    height: $btn-size/3;
+    border-radius: 30%/100%;
+}
