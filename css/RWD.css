@@ -166,7 +166,7 @@
     margin-left: .8vw;
   }
   .container .form-wrap-m {
-    position: fixed;
+    position: static;
     width: 100vw;
     height: 100vh;
     bottom: 0;
