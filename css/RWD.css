@@ -244,6 +244,7 @@
   .container .turntable {
     width: 85vw;
     height: 85vw;
+    top: 45%;
   }
   .container .turntable::before, .container .turntable::after {
     width: 85vw;
@@ -398,7 +399,7 @@
     border-radius: 18%/100%;
   }
   .container .form-wrap .input input[type=number] {
-    width: 74%;
+    width: 52vw;
   }
   .container .form-wrap .input input[type=button] {
     cursor: pointer;
@@ -465,7 +466,7 @@
     border-radius: 15%/100%;
   }
   .container .form-wrap-m .input input[type=number] {
-    width: 77%;
+    width: 58vw;
   }
   .container .form-wrap-m .input input[type=button] {
     cursor: pointer;
@@ -476,6 +477,7 @@
   .container .option-bg-wrap .option-bg {
     width: 85vw;
     height: 85vw;
+    top: 45%;
   }
   .container .option-bg-wrap .option-bg .cover .name span {
     font-size: 6vw;

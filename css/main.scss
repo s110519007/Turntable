@@ -15,6 +15,11 @@ body{
 }
 input{
     outline: none;
+    &[type=button]{
+        border: 0;
+        outline: none;
+        background-color: transparent;
+    }
 }
 @import 'mixin';
 .container{
@@ -301,7 +306,6 @@ input{
                         left: 25%;
                         width: 50%;
                         transform-origin: 50% 100%;
-                        font-size: 3vw;
                         color: #000;
                         text-align: center;
                         line-height: $turntable-size/2;

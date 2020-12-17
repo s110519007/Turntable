@@ -263,6 +263,7 @@ $s-width:767px;
     .container{
         .turntable{
             @include changeTurntable();
+            top: 45%;
             &::before,&::after{
                 @include changeTurntable();
             }
@@ -386,7 +387,7 @@ $s-width:767px;
                     background-color: #fff;
                     border-radius: 18%/100%;
                     &[type=number]{
-                        width: 74%;
+                        width: 52vw;
                     }
                     &[type=button]{
                         cursor: pointer;
@@ -453,7 +454,7 @@ $s-width:767px;
                     background-color: #fff;
                     border-radius: 15%/100%;
                     &[type=number]{
-                        width: 77%;
+                        width: 58vw;
                     }
                     &[type=button]{
                         cursor: pointer;
@@ -467,6 +468,7 @@ $s-width:767px;
         .option-bg-wrap{
             .option-bg{
                 @include changeTurntable();
+                top: 45%;
                 .cover{
                     .name{
                         span{

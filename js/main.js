@@ -50,6 +50,7 @@ $(document).ready(function () {
         
         $('#num').attr('readonly', 'readonly');
         $('#name:nth-child(1)').focus();
+        var w=$(window).width();
         //設定圓盤字大小
         if (num<4) {
             $('span').css('font-size','3vw');
@@ -62,6 +63,18 @@ $(document).ready(function () {
         }
         else{
             $('span').css('font-size','1vw');
+        }
+        //phone圓盤字大小
+        if (w<768) {
+            if(num<=4) {
+                $('span').css('font-size','6vw');
+            }
+            else if(num>4 && num<=6) {
+                $('span').css('font-size','4vw');
+            }
+            else{
+                $('span').css('font-size','3vw');
+            }
         }
     }
     $('.num_change').click(function () { 
@@ -132,7 +145,6 @@ function createParts(num) {
             '-webkit-transform':'rotate('+name_rotate+'deg)',
             'transform':'rotate('+name_rotate+'deg)',
         });
-
         var w=$(window).width();
         if (w<768) {
             if (num<8) {
