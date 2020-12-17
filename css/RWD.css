@@ -166,7 +166,7 @@
     margin-left: .8vw;
   }
   .container .form-wrap-m {
-    position: static;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     bottom: 0;
@@ -406,7 +406,7 @@
     margin-left: 1vw;
   }
   .container .form-wrap-m {
-    position: static;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     bottom: 0;
