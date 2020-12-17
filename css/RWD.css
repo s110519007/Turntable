@@ -217,7 +217,7 @@
   .container .form-wrap-m .input input {
     margin: 1vw 0;
     height: 10vw;
-    font-size: 2vw;
+    font-size: 4vw;
     background-color: #fff;
     border-radius: 18%/100%;
   }
@@ -460,7 +460,7 @@
   .container .form-wrap-m .input input {
     margin: 1.5vw 0;
     height: 10vw;
-    font-size: 2vw;
+    font-size: 4vw;
     background-color: #fff;
     border-radius: 15%/100%;
   }
