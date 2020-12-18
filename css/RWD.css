@@ -236,7 +236,7 @@
   .container .turntable {
     width: 85vw;
     height: 85vw;
-    top: 40%;
+    top: 35%;
   }
   .container .turntable::before, .container .turntable::after {
     width: 85vw;
@@ -417,6 +417,9 @@
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 10;
   }
+  .container .form-wrap-m .options {
+    overflow-y: scroll;
+  }
   .container .form-wrap-m .input {
     position: absolute;
     width: 75%;
@@ -455,7 +458,7 @@
   .container .option-bg-wrap .option-bg {
     width: 85vw;
     height: 85vw;
-    top: 40%;
+    top: 35%;
   }
   .container .option-bg-wrap .option-bg .cover .name span {
     font-size: 6vw;

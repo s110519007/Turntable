@@ -256,7 +256,7 @@ $s-width:767px;
     .container{
         .turntable{
             @include changeTurntable();
-            top: 40%;
+            top: 35%;
             &::before,&::after{
                 @include changeTurntable();
             }
@@ -409,6 +409,9 @@ $s-width:767px;
             transform: translateX(0);
             background-color: rgba(#000,.3);
             z-index: 10;
+            .options{
+                overflow-y: scroll;
+            }
             .input{
                 position: absolute;
                 width: 75%;
@@ -445,7 +448,7 @@ $s-width:767px;
         .option-bg-wrap{
             .option-bg{
                 @include changeTurntable();
-                top: 40%;
+                top: 35%;
                 .cover{
                     .name{
                         span{
