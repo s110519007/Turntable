@@ -409,9 +409,6 @@ $s-width:767px;
             transform: translateX(0);
             background-color: rgba(#000,.3);
             z-index: 10;
-            .options{
-                overflow-y: scroll;
-            }
             .input{
                 position: absolute;
                 width: 75%;
@@ -421,6 +418,8 @@ $s-width:767px;
                 .options{
                     display: flex;
                     width: 100%;
+                    height: 60vh;
+                    overflow-y: scroll;
                 }
                 .btn,.btn-click{
                     left: 50%;
