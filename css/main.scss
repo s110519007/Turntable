@@ -14,12 +14,10 @@ body{
     overflow: hidden;
 }
 input{
+    padding: 0;
+    margin: 0;
     outline: none;
-    &[type=button]{
-        border: 0;
-        outline: none;
-        background-color: transparent;
-    }
+    appearance: none;
 }
 @import 'mixin';
 .container{
@@ -224,22 +222,6 @@ input{
                 color: #000;
                 font-size: .8vw;
                 background-color: #fff;
-                &[type=number]{
-                    width: 74%;
-                    border-radius: 20%/100%;
-                }
-                &[type=button]{
-                    cursor: pointer;
-                    width: 3vw;
-                    height: 3vw;
-                    margin-left: .3vw;
-                    border-radius: 100%/100%;
-                    &:hover{
-                        background-color: #aaa;
-                        color: #fff;
-                        border: 1px solid #fff;
-                    }
-                }
                 &:focus{
                     border: 1px solid #fff;
                     background-color: #aaa;
@@ -250,6 +232,34 @@ input{
                     border: 1px solid #fff;
                     background-color: #aaa;
                     color: rgba($color: #fff, $alpha: .5);
+                }
+            }
+            .num-wrap{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                .num{
+                    width: 80%;
+                    input[type=number]{
+                        margin: .5vw 0;
+                        width: 100%;
+                        border-radius: 20%/100%;
+                    }
+                }
+                .change{
+                    width: 20%;
+                    margin-left: .5vw;
+                    input[type=button]{
+                        cursor: pointer;
+                        width: 3vw;
+                        height: 3vw;
+                        border-radius: 100%/100%;
+                        &:hover{
+                            background-color: #aaa;
+                            color: #fff;
+                            border: 1px solid #fff;
+                        }
+                    }
                 }
             }
         }

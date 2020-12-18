@@ -156,14 +156,20 @@
     background-color: #fff;
     border-radius: 18%/100%;
   }
-  .container .form-wrap .input input[type=number] {
-    width: 73%;
+  .container .form-wrap .input .num-wrap .num {
+    width: 78%;
   }
-  .container .form-wrap .input input[type=button] {
-    cursor: pointer;
+  .container .form-wrap .input .num-wrap .num input[type=number] {
+    margin: 0;
+  }
+  .container .form-wrap .input .num-wrap .change {
+    width: 22%;
+    margin-left: .8vw;
+  }
+  .container .form-wrap .input .num-wrap .change input[type=button] {
+    margin: 0;
     width: 6vw;
     height: 6vw;
-    margin-left: .8vw;
   }
   .container .form-wrap-m {
     margin: 0;
@@ -188,31 +194,11 @@
     display: flex;
     width: 100%;
   }
-  .container .form-wrap-m .input .btn-click::after {
-    font-size: 6vw;
-  }
-  .container .form-wrap-m .input .btn::before {
-    font-size: 6vw;
-  }
   .container .form-wrap-m .input .btn, .container .form-wrap-m .input .btn-click {
-    width: 30vw;
-    height: 10vw;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     margin-top: 3vw;
-  }
-  .container .form-wrap-m .input .btn .btn-border, .container .form-wrap-m .input .btn-click .btn-border {
-    width: 30vw;
-    height: 10vw;
-  }
-  .container .form-wrap-m .input .btn .btn-border::before, .container .form-wrap-m .input .btn-click .btn-border::before {
-    width: 1.5vw;
-    height: 1.5vw;
-  }
-  .container .form-wrap-m .input .btn .btn-border::after, .container .form-wrap-m .input .btn-click .btn-border::after {
-    width: 1.5vw;
-    height: 1.5vw;
   }
   .container .form-wrap-m .input input {
     margin: 1vw 0;
@@ -221,14 +207,20 @@
     background-color: #fff;
     border-radius: 18%/100%;
   }
-  .container .form-wrap-m .input input[type=number] {
-    width: 78%;
+  .container .form-wrap-m .input .num-wrap .num {
+    width: 90%;
   }
-  .container .form-wrap-m .input input[type=button] {
-    cursor: pointer;
+  .container .form-wrap-m .input .num-wrap .num input[type=number] {
+    margin: 0;
+  }
+  .container .form-wrap-m .input .num-wrap .change {
+    width: 10%;
+    margin-left: 1vw;
+  }
+  .container .form-wrap-m .input .num-wrap .change input[type=button] {
+    margin: 0;
     width: 10vw;
     height: 10vw;
-    margin-left: 1vw;
   }
   .container .option-bg-wrap .option-bg {
     width: 75vw;
@@ -244,7 +236,7 @@
   .container .turntable {
     width: 85vw;
     height: 85vw;
-    top: 45%;
+    top: 40%;
   }
   .container .turntable::before, .container .turntable::after {
     width: 85vw;
@@ -398,14 +390,20 @@
     background-color: #fff;
     border-radius: 18%/100%;
   }
-  .container .form-wrap .input input[type=number] {
-    width: 52vw;
+  .container .form-wrap .input .num-wrap .num {
+    width: 80%;
   }
-  .container .form-wrap .input input[type=button] {
-    cursor: pointer;
+  .container .form-wrap .input .num-wrap .num input[type=number] {
+    margin: 1vw 0;
+  }
+  .container .form-wrap .input .num-wrap .change {
+    width: 20%;
+    margin-left: 1.5vw;
+  }
+  .container .form-wrap .input .num-wrap .change input[type=button] {
+    margin: 0;
     width: 12vw;
     height: 12vw;
-    margin-left: 1vw;
   }
   .container .form-wrap-m {
     margin: 0;
@@ -432,31 +430,11 @@
     display: flex;
     width: 100%;
   }
-  .container .form-wrap-m .input .btn-click::after {
-    font-size: 8vw;
-  }
-  .container .form-wrap-m .input .btn::before {
-    font-size: 8vw;
-  }
   .container .form-wrap-m .input .btn, .container .form-wrap-m .input .btn-click {
-    width: 40vw;
-    height: 13.33333vw;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     margin-top: 3vw;
-  }
-  .container .form-wrap-m .input .btn .btn-border, .container .form-wrap-m .input .btn-click .btn-border {
-    width: 40vw;
-    height: 13.33333vw;
-  }
-  .container .form-wrap-m .input .btn .btn-border::before, .container .form-wrap-m .input .btn-click .btn-border::before {
-    width: 2vw;
-    height: 2vw;
-  }
-  .container .form-wrap-m .input .btn .btn-border::after, .container .form-wrap-m .input .btn-click .btn-border::after {
-    width: 2vw;
-    height: 2vw;
   }
   .container .form-wrap-m .input input {
     margin: 1.5vw 0;
@@ -477,7 +455,7 @@
   .container .option-bg-wrap .option-bg {
     width: 85vw;
     height: 85vw;
-    top: 45%;
+    top: 40%;
   }
   .container .option-bg-wrap .option-bg .cover .name span {
     font-size: 6vw;

@@ -24,13 +24,12 @@ body {
 }
 
 input {
+  padding: 0;
+  margin: 0;
   outline: none;
-}
-
-input[type=button] {
-  border: 0;
-  outline: none;
-  background-color: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .container {
@@ -387,25 +386,6 @@ input[type=button] {
   background-color: #fff;
 }
 
-.container .form-wrap .input input[type=number] {
-  width: 74%;
-  border-radius: 20%/100%;
-}
-
-.container .form-wrap .input input[type=button] {
-  cursor: pointer;
-  width: 3vw;
-  height: 3vw;
-  margin-left: .3vw;
-  border-radius: 100%/100%;
-}
-
-.container .form-wrap .input input[type=button]:hover {
-  background-color: #aaa;
-  color: #fff;
-  border: 1px solid #fff;
-}
-
 .container .form-wrap .input input:focus {
   border: 1px solid #fff;
   background-color: #aaa;
@@ -424,6 +404,45 @@ input[type=button] {
   border: 1px solid #fff;
   background-color: #aaa;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.container .form-wrap .input .num-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .form-wrap .input .num-wrap .num {
+  width: 80%;
+}
+
+.container .form-wrap .input .num-wrap .num input[type=number] {
+  margin: .5vw 0;
+  width: 100%;
+  border-radius: 20%/100%;
+}
+
+.container .form-wrap .input .num-wrap .change {
+  width: 20%;
+  margin-left: .5vw;
+}
+
+.container .form-wrap .input .num-wrap .change input[type=button] {
+  cursor: pointer;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 100%/100%;
+}
+
+.container .form-wrap .input .num-wrap .change input[type=button]:hover {
+  background-color: #aaa;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .container .option-bg-wrap {
