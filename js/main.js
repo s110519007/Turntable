@@ -26,20 +26,37 @@ $(document).ready(function () {
         var code = e.keyCode || e.which;
         if(code == 13) { //Enter keycode
             createTurntable();
+            $('#name1').focus();
             $('.num_submit').hide();
             $('.num_change').show();
         }
     });
     //輸入<->修改
     $('.num_submit').click(function () { 
+        $('.form-wrap').addClass('form-wrap-m');
+        $('#num').focus();
+        form_m=true;
+    });
+    $('.num_submit').click(function () { 
         createTurntable();
-        $('.option-wrap:nth-child(1) input').focus();
+        $('#name1').focus();
         $('.num_change').toggle();
         $('.num_submit').toggle();
     });
     $('.num_change').click(function () { 
         $('.num_change').toggle();
         $('.num_submit').toggle();
+        $('#num').focus();
+        $('#num').select();
+        $('#num').removeAttr('readonly');
+        for (let n = 1; n <= num; n++) {
+            $('#name'+n).remove();
+            $('.cover').remove();    
+        }
+    });
+    $('#num').focus(function () { 
+        $('.form-wrap').addClass('form-wrap-m');
+        $('.btn').addClass('start');
     });
     function createTurntable() {
         //取得選項數量
@@ -91,19 +108,7 @@ $(document).ready(function () {
         }
         return(num);
     }
-    $('.num_change').click(function () { 
-        $('#num').focus();
-        $('#num').select();
-        $('#num').removeAttr('readonly');
-        for (let n = 1; n <= num; n++) {
-            $('#name').remove();
-            $('.cover').remove();    
-        }
-    });
-    $('#num').focus(function () { 
-        $('.form-wrap').addClass('form-wrap-m');
-        $('.btn').addClass('start');
-    });
+    
 });
 function stop() {
     $('.option-bg').css({
@@ -136,7 +141,7 @@ function createParts(num) {
         option_wrap.className="option-wrap";
         var option = document.createElement('input');
         option.type="text";
-        option.id="name";
+        option.id="name"+n;
         option.name="option";
         option.placeholder="選項"+n;
         option.required="required";
@@ -173,17 +178,23 @@ function createParts(num) {
         }
         //取得選項值
         var option_name =[];
-        $('.option-wrap:nth-child('+n+') input').on("change", function () {
+        $('#name'+n).on("change", function () {
             option_name[n-1] = this.value;
             console.log(option_name);
             $('.cover:nth-child('+n+') span').empty();
             $('.cover:nth-child('+n+') span').append(option_name[n-1]);
         });
 
-        $('.option-wrap:nth-child('+n+') input').keypress(function (e) { 
+        $('#name'+n).keypress(function (e) { 
             var code = e.keyCode || e.which;
             if(code == 13) { //Enter keycode
-                $('.option-wrap:nth-child('+n+1+') input').focus();
+                $('#name'+(n+1)).focus();
+            }
+        });
+        $('#name'+num).keypress(function (e) { 
+            var code = e.keyCode || e.which;
+            if(code == 13) { //Enter keycode
+                $('#name1').focus();
             }
         });
     }
