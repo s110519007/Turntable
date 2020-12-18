@@ -158,10 +158,15 @@ $s-width:767px;
                     .change{
                         width: 22%;
                         margin-left: .8vw;
-                        input[type=button]{
+                        .num_submit,.num_change{
                             margin: 0;
                             width: 6vw;
                             height: 6vw;
+                            &:active{
+                                background-color: #aaa;
+                                color: #fff;
+                                border: 1px solid #fff;
+                            }
                         }
                     }
                 }
@@ -211,7 +216,7 @@ $s-width:767px;
                     .change{
                         width: 20%;
                         margin-left: 1vw;
-                        input[type=button]{
+                        .num_submit,.num_change{
                             margin: 0;
                             width: 10vw;
                             height: 10vw;
@@ -258,7 +263,7 @@ $s-width:767px;
     .container{
         .turntable{
             @include changeTurntable();
-            top: 35%;
+            top: 45%;
             &::before,&::after{
                 @include changeTurntable();
             }
@@ -392,10 +397,15 @@ $s-width:767px;
                     .change{
                         width: 20%;
                         margin-left: 1.5vw;
-                        input[type=button]{
+                        .num_submit,.num_change{
                             margin: 0;
                             width: 12vw;
                             height: 12vw;
+                            &:active{
+                                background-color: #aaa;
+                                color: #fff;
+                                border: 1px solid #fff;
+                            }
                         }
                     }
                 }
@@ -449,7 +459,7 @@ $s-width:767px;
         .option-bg-wrap{
             .option-bg{
                 @include changeTurntable();
-                top: 35%;
+                top: 45%;
                 .cover{
                     .name{
                         span{

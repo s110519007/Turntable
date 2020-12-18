@@ -440,17 +440,23 @@ input {
   margin-left: .5vw;
 }
 
-.container .form-wrap .input .num-wrap .change input[type=button] {
+.container .form-wrap .input .num-wrap .change .num_submit, .container .form-wrap .input .num-wrap .change .num_change {
   cursor: pointer;
   width: 3vw;
   height: 3vw;
   border-radius: 100%/100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
-.container .form-wrap .input .num-wrap .change input[type=button]:hover {
+.container .form-wrap .input .num-wrap .change .num_submit:hover, .container .form-wrap .input .num-wrap .change .num_change:hover {
   background-color: #aaa;
   color: #fff;
   border: 1px solid #fff;
+}
+
+.container .form-wrap .input .num-wrap .change .num_change {
+  display: none;
 }
 
 .container .option-bg-wrap {

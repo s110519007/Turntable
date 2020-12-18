@@ -255,16 +255,20 @@ input{
                 .change{
                     width: 20%;
                     margin-left: .5vw;
-                    input[type=button]{
+                    .num_submit,.num_change{
                         cursor: pointer;
                         width: 3vw;
                         height: 3vw;
                         border-radius: 100%/100%;
+                        transition: all .3s;
                         &:hover{
                             background-color: #aaa;
                             color: #fff;
                             border: 1px solid #fff;
                         }
+                    }
+                    .num_change{
+                        display: none;
                     }
                 }
             }

@@ -166,10 +166,15 @@
     width: 22%;
     margin-left: .8vw;
   }
-  .container .form-wrap .input .num-wrap .change input[type=button] {
+  .container .form-wrap .input .num-wrap .change .num_submit, .container .form-wrap .input .num-wrap .change .num_change {
     margin: 0;
     width: 6vw;
     height: 6vw;
+  }
+  .container .form-wrap .input .num-wrap .change .num_submit:active, .container .form-wrap .input .num-wrap .change .num_change:active {
+    background-color: #aaa;
+    color: #fff;
+    border: 1px solid #fff;
   }
   .container .form-wrap-m {
     margin: 0;
@@ -219,7 +224,7 @@
     width: 20%;
     margin-left: 1vw;
   }
-  .container .form-wrap-m .input .num-wrap .change input[type=button] {
+  .container .form-wrap-m .input .num-wrap .change .num_submit, .container .form-wrap-m .input .num-wrap .change .num_change {
     margin: 0;
     width: 10vw;
     height: 10vw;
@@ -238,7 +243,7 @@
   .container .turntable {
     width: 85vw;
     height: 85vw;
-    top: 35%;
+    top: 45%;
   }
   .container .turntable::before, .container .turntable::after {
     width: 85vw;
@@ -402,10 +407,15 @@
     width: 20%;
     margin-left: 1.5vw;
   }
-  .container .form-wrap .input .num-wrap .change input[type=button] {
+  .container .form-wrap .input .num-wrap .change .num_submit, .container .form-wrap .input .num-wrap .change .num_change {
     margin: 0;
     width: 12vw;
     height: 12vw;
+  }
+  .container .form-wrap .input .num-wrap .change .num_submit:active, .container .form-wrap .input .num-wrap .change .num_change:active {
+    background-color: #aaa;
+    color: #fff;
+    border: 1px solid #fff;
   }
   .container .form-wrap-m {
     margin: 0;
@@ -459,7 +469,7 @@
   .container .option-bg-wrap .option-bg {
     width: 85vw;
     height: 85vw;
-    top: 35%;
+    top: 45%;
   }
   .container .option-bg-wrap .option-bg .cover .name span {
     font-size: 6vw;

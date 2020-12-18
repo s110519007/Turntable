@@ -26,7 +26,19 @@ $(document).ready(function () {
         var code = e.keyCode || e.which;
         if(code == 13) { //Enter keycode
             createTurntable();
+            $('.num_submit').hide();
+            $('.num_change').show();
         }
+    });
+    //輸入<->修改
+    $('.num_submit').click(function () { 
+        createTurntable();
+        $('.num_change').toggle();
+        $('.num_submit').toggle();
+    });
+    $('.num_change').click(function () { 
+        $('.num_change').toggle();
+        $('.num_submit').toggle();
     });
     function createTurntable() {
         //取得選項數量
@@ -76,6 +88,7 @@ $(document).ready(function () {
                 $('span').css('font-size','3vw');
             }
         }
+        return(num);
     }
     $('.num_change').click(function () { 
         $('#num').focus();
