@@ -189,12 +189,14 @@ function createParts(num) {
             var code = e.keyCode || e.which;
             if(code == 13) { //Enter keycode
                 $('#name'+(n+1)).focus();
+                $('#name'+(n+1)).select();
             }
         });
         $('#name'+num).keypress(function (e) { 
             var code = e.keyCode || e.which;
             if(code == 13) { //Enter keycode
                 $('#name1').focus();
+                $('#name1').select();
             }
         });
     }
