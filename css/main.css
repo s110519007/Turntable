@@ -252,7 +252,6 @@ input {
 
 .container .form-wrap .input .options {
   margin: 0;
-  padding: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -261,6 +260,14 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.container .form-wrap .input .options .option-wrap {
+  padding: 0 5px;
+}
+
+.container .form-wrap .input .options .option-wrap input {
+  width: 100%;
 }
 
 .container .form-wrap .input .btn-click::after {
@@ -407,6 +414,7 @@ input {
 }
 
 .container .form-wrap .input .num-wrap {
+  margin: 0 5px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

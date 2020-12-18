@@ -49,7 +49,7 @@ $(document).ready(function () {
         }
         
         $('#num').attr('readonly', 'readonly');
-        $('#name:nth-child(1)').focus();
+        $('.option-wrap:nth-child(1) input').focus();
         var w=$(window).width();
         //設定圓盤字大小
         if (num<4) {
@@ -118,6 +118,8 @@ function createParts(num) {
         name.appendChild(name_span);
 
         // 建立選項
+        var option_wrap = document.createElement('div');
+        option_wrap.className="option-wrap";
         var option = document.createElement('input');
         option.type="text";
         option.id="name";
@@ -126,7 +128,8 @@ function createParts(num) {
         option.required="required";
         option.maxLength="6";
         option.autocomplete="off";
-        $('.options').append(option);
+        $('.options').append(option_wrap);
+        option_wrap.appendChild(option);
 
         var rotateDeg=(360/num)*(-1+n);
         $('.cover:nth-child('+n+')').css({
@@ -156,17 +159,17 @@ function createParts(num) {
         }
         //取得選項值
         var option_name =[];
-        $('#name:nth-child('+n+')').on("change", function () {
+        $('.option-wrap:nth-child('+n+') input').on("change", function () {
             option_name[n-1] = this.value;
             console.log(option_name);
             $('.cover:nth-child('+n+') span').empty();
             $('.cover:nth-child('+n+') span').append(option_name[n-1]);
         });
 
-        $('#name:nth-child('+n+')').keypress(function (e) { 
+        $('.option-wrap:nth-child('+n+') input').keypress(function (e) { 
             var code = e.keyCode || e.which;
             if(code == 13) { //Enter keycode
-                $('#name:nth-child('+(n+1)+')').focus();
+                $('.option-wrap:nth-child('+n+1+') input').focus();
             }
         });
     }
