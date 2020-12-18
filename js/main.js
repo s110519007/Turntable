@@ -33,6 +33,7 @@ $(document).ready(function () {
     //輸入<->修改
     $('.num_submit').click(function () { 
         createTurntable();
+        $('.option-wrap:nth-child(1) input').focus();
         $('.num_change').toggle();
         $('.num_submit').toggle();
     });
