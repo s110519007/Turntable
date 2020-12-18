@@ -184,7 +184,6 @@ function createParts(num) {
             $('.cover:nth-child('+n+') span').empty();
             $('.cover:nth-child('+n+') span').append(option_name[n-1]);
         });
-
         $('#name'+n).keypress(function (e) { 
             var code = e.keyCode || e.which;
             if(code == 13) { //Enter keycode
@@ -198,6 +197,9 @@ function createParts(num) {
                 $('#name1').focus();
                 $('#name1').select();
             }
+        });
+        $('#name'+n).focus(function () { 
+            $(this).select();
         });
     }
 }
