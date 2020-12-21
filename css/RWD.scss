@@ -243,7 +243,7 @@ $s-width:767px;
     }
 }
 //pad landscape
-@media screen and (max-width:$m-width) and (min-width:861px) and (orientation: landscape) {
+@media screen and (max-width:$m-width) and (min-width:901px) and (orientation: landscape) {
     $center: translate(-50%,-50%);
     $turntable-size:50vw;
     $cursor-width:3vw;
@@ -715,7 +715,7 @@ $s-width:767px;
     }
 }
 //phone landscape
-@media screen and (max-width:860px) and (orientation: landscape){
+@media screen and (max-width:900px) and (orientation: landscape){
     .container{
         display: none;
     }
