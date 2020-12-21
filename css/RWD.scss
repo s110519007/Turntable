@@ -717,7 +717,7 @@ $s-width:767px;
 //phone landscape
 @media screen and (max-width:849px) and (orientation: landscape),(max-height: 500px){
     $center: translate(-50%,-50%);
-    $turntable-size:40vw;
+    $turntable-size:32vw;
     $cursor-width:2vw;
     $btn-size:20vw;
     @mixin changeTurntable {
@@ -741,7 +741,7 @@ $s-width:767px;
         .turntable{
             @include changeTurntable();
             top: 50%;
-            left: 30%;
+            left: 25%;
             &::before,&::after{
                 @include changeTurntable();
             }
@@ -908,7 +908,7 @@ $s-width:767px;
             .option-bg{
                 @include changeTurntable();
                 top: 50%;
-                left: 30%;
+                left: 25%;
                 .cover{
                     .name{
                         span{

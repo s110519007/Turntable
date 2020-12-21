@@ -729,30 +729,30 @@
     overflow: hidden;
   }
   .container .turntable {
-    width: 40vw;
-    height: 40vw;
+    width: 32vw;
+    height: 32vw;
     top: 50%;
-    left: 30%;
+    left: 25%;
   }
   .container .turntable::before, .container .turntable::after {
-    width: 40vw;
-    height: 40vw;
+    width: 32vw;
+    height: 32vw;
   }
   .container .turntable .pin {
-    width: 40vw;
-    height: 40vw;
-    width: 2.66667vw;
-    height: 2.66667vw;
-  }
-  .container .turntable .pin::before {
-    width: 40vw;
-    height: 40vw;
+    width: 32vw;
+    height: 32vw;
     width: 2.13333vw;
     height: 2.13333vw;
   }
+  .container .turntable .pin::before {
+    width: 32vw;
+    height: 32vw;
+    width: 1.70667vw;
+    height: 1.70667vw;
+  }
   .container .turntable .pin::after {
-    width: 0.53333vw;
-    height: 2.66667vw;
+    width: 0.42667vw;
+    height: 2.13333vw;
   }
   .container .turntable .cursor {
     border-top: 10vw solid #000;
@@ -922,14 +922,14 @@
     overflow-y: scroll;
   }
   .container .option-bg-wrap .option-bg {
-    width: 40vw;
-    height: 40vw;
+    width: 32vw;
+    height: 32vw;
     top: 50%;
-    left: 30%;
+    left: 25%;
   }
   .container .option-bg-wrap .option-bg .cover .name span {
     font-size: 6vw;
-    line-height: 20vw;
+    line-height: 16vw;
   }
   footer {
     opacity: .1;
