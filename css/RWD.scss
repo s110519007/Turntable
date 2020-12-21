@@ -550,7 +550,7 @@ $s-width:767px;
                     }
                     67%{
                         transform: translateY(-$cursor-width*5) skewX(-15deg);
-                        margin-left: $cursor-width*.6;
+                        margin-left: $cursor-width*.55;
                     }
                     100%{
                         transform: translateY(-$cursor-width*5) skewX(15deg);

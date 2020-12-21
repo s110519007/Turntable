@@ -545,7 +545,7 @@
     67% {
       -webkit-transform: translateY(-25vw) skewX(-15deg);
               transform: translateY(-25vw) skewX(-15deg);
-      margin-left: 3vw;
+      margin-left: 2.75vw;
     }
     100% {
       -webkit-transform: translateY(-25vw) skewX(15deg);
@@ -567,7 +567,7 @@
     67% {
       -webkit-transform: translateY(-25vw) skewX(-15deg);
               transform: translateY(-25vw) skewX(-15deg);
-      margin-left: 3vw;
+      margin-left: 2.75vw;
     }
     100% {
       -webkit-transform: translateY(-25vw) skewX(15deg);
