@@ -6,7 +6,7 @@ $(document).ready(function () {
     //     $(".container").width(x);
     //     $(".container").height(y);
     // });
-    android:windowSoftInputMode="adjustResize";
+    $('body').height($('body')[0].clientHeight);
     // 轉盤開始<->停止
     var click;
     click=true;
