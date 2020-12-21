@@ -6,7 +6,7 @@ $(document).ready(function () {
     //     $(".container").width(x);
     //     $(".container").height(y);
     // });
-    android:windowSoftInputMode="adjustPan";
+    android:windowSoftInputMode="adjustResize";
     // 轉盤開始<->停止
     var click;
     click=true;
