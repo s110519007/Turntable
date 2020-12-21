@@ -562,4 +562,14 @@ input {
   text-align: center;
   line-height: 20vw;
 }
+
+footer {
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  opacity: .2;
+  font-size: 12px;
+}
 /*# sourceMappingURL=main.css.map */

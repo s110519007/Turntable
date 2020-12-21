@@ -10,6 +10,7 @@ $(document).ready(function () {
             $('.btn').addClass('btn-click');
             $('.btn').removeClass('btn');
             $('.form-wrap-m').removeClass('form-wrap-m');
+            $('.form-wrap-s').removeClass('form-wrap-s');
         } else {
             click=true;
             $('.btn-click').addClass('btn');
@@ -17,6 +18,7 @@ $(document).ready(function () {
             // 停止時延遲0.5秒才停
             setTimeout(stop,500);
             $('.form-wrap-m').removeClass('form-wrap-m');
+            $('.form-wrap-s').removeClass('form-wrap-s');
         }
     });
     // 清除延遲
@@ -34,6 +36,7 @@ $(document).ready(function () {
     //輸入<->修改
     $('.num_submit').click(function () { 
         $('.form-wrap').addClass('form-wrap-m');
+        $('.form-wrap').addClass('form-wrap-s');
         $('#num').focus();
         form_m=true;
     });
@@ -56,6 +59,7 @@ $(document).ready(function () {
     });
     $('#num').focus(function () { 
         $('.form-wrap').addClass('form-wrap-m');
+        $('.form-wrap').addClass('form-wrap-s');
         $('.btn').addClass('start');
     });
     function createTurntable() {

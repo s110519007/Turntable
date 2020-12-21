@@ -7,6 +7,7 @@
   .container .turntable {
     width: 75vw;
     height: 75vw;
+    top: 45%;
   }
   .container .turntable::before, .container .turntable::after {
     width: 75vw;
@@ -232,6 +233,7 @@
   .container .option-bg-wrap .option-bg {
     width: 75vw;
     height: 75vw;
+    top: 45%;
   }
   .container .option-bg-wrap .option-bg .cover .name span {
     font-size: 6vw;
@@ -239,11 +241,254 @@
   }
 }
 
+@media screen and (max-width: 1024px) and (min-width: 850px) and (orientation: landscape) {
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .container .turntable {
+    width: 50vw;
+    height: 50vw;
+    top: 45%;
+  }
+  .container .turntable::before, .container .turntable::after {
+    width: 50vw;
+    height: 50vw;
+  }
+  .container .turntable .pin {
+    width: 50vw;
+    height: 50vw;
+    width: 3.33333vw;
+    height: 3.33333vw;
+  }
+  .container .turntable .pin::before {
+    width: 50vw;
+    height: 50vw;
+    width: 2.66667vw;
+    height: 2.66667vw;
+  }
+  .container .turntable .pin::after {
+    width: 0.66667vw;
+    height: 3.33333vw;
+  }
+  .container .turntable .cursor {
+    border-top: 15vw solid #000;
+    border-left: 3vw solid transparent;
+    border-right: 3vw solid transparent;
+  }
+  .container .turntable .cursor::before {
+    margin-left: -3vw;
+    -webkit-transform: translate(10%, -120%);
+            transform: translate(10%, -120%);
+    margin-left: -3vw;
+    width: 5.4vw;
+    height: 12vw;
+  }
+  .container .turntable .cursor::after {
+    border-top: 15vw solid #000;
+    border-left: 3vw solid transparent;
+    border-right: 3vw solid transparent;
+    border: none;
+    width: 0.9vw;
+    height: 1.35vw;
+  }
+  @-webkit-keyframes cursor-border {
+    0% {
+      -webkit-transform: translateY(-15vw) skewX(15deg);
+              transform: translateY(-15vw) skewX(15deg);
+      margin-left: -2.7vw;
+    }
+    33% {
+      -webkit-transform: translateY(-3.6vw);
+              transform: translateY(-3.6vw);
+      margin-left: -0.45vw;
+    }
+    67% {
+      -webkit-transform: translateY(-15vw) skewX(-15deg);
+              transform: translateY(-15vw) skewX(-15deg);
+      margin-left: 1.8vw;
+    }
+    100% {
+      -webkit-transform: translateY(-15vw) skewX(15deg);
+              transform: translateY(-15vw) skewX(15deg);
+      margin-left: -2.7vw;
+    }
+  }
+  @keyframes cursor-border {
+    0% {
+      -webkit-transform: translateY(-15vw) skewX(15deg);
+              transform: translateY(-15vw) skewX(15deg);
+      margin-left: -2.7vw;
+    }
+    33% {
+      -webkit-transform: translateY(-3.6vw);
+              transform: translateY(-3.6vw);
+      margin-left: -0.45vw;
+    }
+    67% {
+      -webkit-transform: translateY(-15vw) skewX(-15deg);
+              transform: translateY(-15vw) skewX(-15deg);
+      margin-left: 1.8vw;
+    }
+    100% {
+      -webkit-transform: translateY(-15vw) skewX(15deg);
+              transform: translateY(-15vw) skewX(15deg);
+      margin-left: -2.7vw;
+    }
+  }
+  .container .form-wrap {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+  }
+  .container .form-wrap .input .options {
+    width: 100%;
+    display: none;
+  }
+  .container .form-wrap .input .btn-click::after {
+    font-size: 5vw;
+  }
+  .container .form-wrap .input .btn::before {
+    font-size: 5vw;
+  }
+  .container .form-wrap .input .btn, .container .form-wrap .input .btn-click {
+    width: 25vw;
+    height: 8.33333vw;
+    margin-top: 2vw;
+  }
+  .container .form-wrap .input .btn .btn-border, .container .form-wrap .input .btn-click .btn-border {
+    width: 25vw;
+    height: 8.33333vw;
+  }
+  .container .form-wrap .input .btn .btn-border::before, .container .form-wrap .input .btn-click .btn-border::before {
+    width: 1.25vw;
+    height: 1.25vw;
+  }
+  .container .form-wrap .input .btn .btn-border::after, .container .form-wrap .input .btn-click .btn-border::after {
+    width: 1.25vw;
+    height: 1.25vw;
+  }
+  .container .form-wrap .input .btn:hover, .container .form-wrap .input .btn-click:hover {
+    background-color: #000;
+  }
+  .container .form-wrap .input .btn:hover::before, .container .form-wrap .input .btn:hover::after, .container .form-wrap .input .btn-click:hover::before, .container .form-wrap .input .btn-click:hover::after {
+    color: #fff;
+  }
+  .container .form-wrap .input .btn:hover .btn-border, .container .form-wrap .input .btn-click:hover .btn-border {
+    border-color: #fff;
+  }
+  .container .form-wrap .input .btn:hover .btn-border::before, .container .form-wrap .input .btn:hover .btn-border::after, .container .form-wrap .input .btn-click:hover .btn-border::before, .container .form-wrap .input .btn-click:hover .btn-border::after {
+    background-color: #000;
+  }
+  .container .form-wrap .input .btn:active, .container .form-wrap .input .btn-click:active {
+    background-color: #fff;
+  }
+  .container .form-wrap .input .btn:active::before, .container .form-wrap .input .btn:active::after, .container .form-wrap .input .btn-click:active::before, .container .form-wrap .input .btn-click:active::after {
+    color: #000;
+  }
+  .container .form-wrap .input .btn:active .btn-border, .container .form-wrap .input .btn-click:active .btn-border {
+    border-color: #000;
+  }
+  .container .form-wrap .input .btn:active .btn-border::before, .container .form-wrap .input .btn:active .btn-border::after, .container .form-wrap .input .btn-click:active .btn-border::before, .container .form-wrap .input .btn-click:active .btn-border::after {
+    background-color: #fff;
+  }
+  .container .form-wrap .input input {
+    margin: 1vw 0;
+    height: 5vw;
+    font-size: 1.5vw;
+    background-color: #fff;
+    border-radius: 18%/100%;
+  }
+  .container .form-wrap .input .num-wrap .num {
+    width: 78%;
+  }
+  .container .form-wrap .input .num-wrap .num input[type=number] {
+    margin: 0;
+  }
+  .container .form-wrap .input .num-wrap .change {
+    width: 22%;
+    margin-left: .8vw;
+  }
+  .container .form-wrap .input .num-wrap .change .num_submit, .container .form-wrap .input .num-wrap .change .num_change {
+    margin: 0;
+    width: 5vw;
+    height: 5vw;
+  }
+  .container .form-wrap .input .num-wrap .change .num_submit:active, .container .form-wrap .input .num-wrap .change .num_change:active {
+    background-color: #aaa;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .container .form-wrap-m {
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+  .container .form-wrap-m .input {
+    position: absolute;
+    width: 40%;
+    bottom: 3%;
+    right: 30%;
+    left: 30%;
+  }
+  .container .form-wrap-m .input .options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: scroll;
+  }
+  .container .form-wrap-m .input .btn, .container .form-wrap-m .input .btn-click {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin-top: 3vw;
+  }
+  .container .form-wrap-m .input input {
+    margin: 1vw 0;
+    height: 6vw;
+    font-size: 2vw;
+    background-color: #fff;
+    border-radius: 18%/100%;
+  }
+  .container .form-wrap-m .input .num-wrap .num {
+    width: 80%;
+  }
+  .container .form-wrap-m .input .num-wrap .num input[type=number] {
+    margin: 0;
+  }
+  .container .form-wrap-m .input .num-wrap .change {
+    width: 20%;
+    margin-left: 1vw;
+  }
+  .container .form-wrap-m .input .num-wrap .change .num_submit, .container .form-wrap-m .input .num-wrap .change .num_change {
+    margin: 0;
+    width: 6vw;
+    height: 6vw;
+  }
+  .container .option-bg-wrap .option-bg {
+    width: 50vw;
+    height: 50vw;
+    top: 45%;
+  }
+  .container .option-bg-wrap .option-bg .cover .name span {
+    font-size: 6vw;
+    line-height: 25vw;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .container .turntable {
     width: 85vw;
     height: 85vw;
-    top: 45%;
+    top: 40%;
   }
   .container .turntable::before, .container .turntable::after {
     width: 85vw;
@@ -417,7 +662,7 @@
     color: #fff;
     border: 1px solid #fff;
   }
-  .container .form-wrap-m {
+  .container .form-wrap-s {
     margin: 0;
     position: absolute;
     width: 100vw;
@@ -429,14 +674,14 @@
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 10;
   }
-  .container .form-wrap-m .input {
+  .container .form-wrap-s .input {
     position: absolute;
     width: 75%;
     bottom: 3%;
     right: 12.5%;
     left: 12.5%;
   }
-  .container .form-wrap-m .input .options {
+  .container .form-wrap-s .input .options {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -444,23 +689,23 @@
     max-height: 60vh;
     overflow-y: scroll;
   }
-  .container .form-wrap-m .input .btn, .container .form-wrap-m .input .btn-click {
+  .container .form-wrap-s .input .btn, .container .form-wrap-s .input .btn-click {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     margin-top: 3vw;
   }
-  .container .form-wrap-m .input input {
+  .container .form-wrap-s .input input {
     margin: 1.5vw 0;
     height: 10vw;
     font-size: 4vw;
     background-color: #fff;
     border-radius: 15%/100%;
   }
-  .container .form-wrap-m .input input[type=number] {
+  .container .form-wrap-s .input input[type=number] {
     width: 58vw;
   }
-  .container .form-wrap-m .input input[type=button] {
+  .container .form-wrap-s .input input[type=button] {
     cursor: pointer;
     width: 12vw;
     height: 12vw;
@@ -469,11 +714,225 @@
   .container .option-bg-wrap .option-bg {
     width: 85vw;
     height: 85vw;
-    top: 45%;
+    top: 40%;
   }
   .container .option-bg-wrap .option-bg .cover .name span {
     font-size: 6vw;
     line-height: 42.5vw;
+  }
+}
+
+@media screen and (max-width: 849px) and (orientation: landscape), (max-height: 500px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .container .turntable {
+    width: 40vw;
+    height: 40vw;
+    top: 50%;
+    left: 30%;
+  }
+  .container .turntable::before, .container .turntable::after {
+    width: 40vw;
+    height: 40vw;
+  }
+  .container .turntable .pin {
+    width: 40vw;
+    height: 40vw;
+    width: 2.66667vw;
+    height: 2.66667vw;
+  }
+  .container .turntable .pin::before {
+    width: 40vw;
+    height: 40vw;
+    width: 2.13333vw;
+    height: 2.13333vw;
+  }
+  .container .turntable .pin::after {
+    width: 0.53333vw;
+    height: 2.66667vw;
+  }
+  .container .turntable .cursor {
+    border-top: 10vw solid #000;
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+  }
+  .container .turntable .cursor::before {
+    margin-left: -2vw;
+    -webkit-transform: translate(10%, -120%);
+            transform: translate(10%, -120%);
+    margin-left: -2vw;
+    width: 3.6vw;
+    height: 8vw;
+  }
+  .container .turntable .cursor::after {
+    border-top: 10vw solid #000;
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+    border: none;
+    width: 0.6vw;
+    height: 0.9vw;
+  }
+  @-webkit-keyframes cursor-border {
+    0% {
+      -webkit-transform: translateY(-10vw) skewX(15deg);
+              transform: translateY(-10vw) skewX(15deg);
+      margin-left: -1.8vw;
+    }
+    33% {
+      -webkit-transform: translateY(-2.4vw);
+              transform: translateY(-2.4vw);
+      margin-left: -0.3vw;
+    }
+    67% {
+      -webkit-transform: translateY(-10vw) skewX(-15deg);
+              transform: translateY(-10vw) skewX(-15deg);
+      margin-left: 1.2vw;
+    }
+    100% {
+      -webkit-transform: translateY(-10vw) skewX(15deg);
+              transform: translateY(-10vw) skewX(15deg);
+      margin-left: -1.8vw;
+    }
+  }
+  @keyframes cursor-border {
+    0% {
+      -webkit-transform: translateY(-10vw) skewX(15deg);
+              transform: translateY(-10vw) skewX(15deg);
+      margin-left: -1.8vw;
+    }
+    33% {
+      -webkit-transform: translateY(-2.4vw);
+              transform: translateY(-2.4vw);
+      margin-left: -0.3vw;
+    }
+    67% {
+      -webkit-transform: translateY(-10vw) skewX(-15deg);
+              transform: translateY(-10vw) skewX(-15deg);
+      margin-left: 1.2vw;
+    }
+    100% {
+      -webkit-transform: translateY(-10vw) skewX(15deg);
+              transform: translateY(-10vw) skewX(15deg);
+      margin-left: -1.8vw;
+    }
+  }
+  .container .form-wrap, .container .form-wrap-s {
+    position: absolute;
+    bottom: 5%;
+    right: 2.5%;
+    width: 40%;
+    background-color: transparent;
+  }
+  .container .form-wrap .input .options, .container .form-wrap-s .input .options {
+    width: 100%;
+  }
+  .container .form-wrap .input .btn-click::after, .container .form-wrap-s .input .btn-click::after {
+    font-size: 4vw;
+  }
+  .container .form-wrap .input .btn::before, .container .form-wrap-s .input .btn::before {
+    font-size: 4vw;
+  }
+  .container .form-wrap .input .btn, .container .form-wrap .input .btn-click, .container .form-wrap-s .input .btn, .container .form-wrap-s .input .btn-click {
+    width: 20vw;
+    height: 6.66667vw;
+    margin-top: 2vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .container .form-wrap .input .btn .btn-border, .container .form-wrap .input .btn-click .btn-border, .container .form-wrap-s .input .btn .btn-border, .container .form-wrap-s .input .btn-click .btn-border {
+    width: 20vw;
+    height: 6.66667vw;
+  }
+  .container .form-wrap .input .btn .btn-border::before, .container .form-wrap .input .btn-click .btn-border::before, .container .form-wrap-s .input .btn .btn-border::before, .container .form-wrap-s .input .btn-click .btn-border::before {
+    width: 1vw;
+    height: 1vw;
+  }
+  .container .form-wrap .input .btn .btn-border::after, .container .form-wrap .input .btn-click .btn-border::after, .container .form-wrap-s .input .btn .btn-border::after, .container .form-wrap-s .input .btn-click .btn-border::after {
+    width: 1vw;
+    height: 1vw;
+  }
+  .container .form-wrap .input .btn:hover, .container .form-wrap .input .btn-click:hover, .container .form-wrap-s .input .btn:hover, .container .form-wrap-s .input .btn-click:hover {
+    background-color: #000;
+  }
+  .container .form-wrap .input .btn:hover::before, .container .form-wrap .input .btn:hover::after, .container .form-wrap .input .btn-click:hover::before, .container .form-wrap .input .btn-click:hover::after, .container .form-wrap-s .input .btn:hover::before, .container .form-wrap-s .input .btn:hover::after, .container .form-wrap-s .input .btn-click:hover::before, .container .form-wrap-s .input .btn-click:hover::after {
+    color: #fff;
+  }
+  .container .form-wrap .input .btn:hover .btn-border, .container .form-wrap .input .btn-click:hover .btn-border, .container .form-wrap-s .input .btn:hover .btn-border, .container .form-wrap-s .input .btn-click:hover .btn-border {
+    border-color: #fff;
+  }
+  .container .form-wrap .input .btn:hover .btn-border::before, .container .form-wrap .input .btn:hover .btn-border::after, .container .form-wrap .input .btn-click:hover .btn-border::before, .container .form-wrap .input .btn-click:hover .btn-border::after, .container .form-wrap-s .input .btn:hover .btn-border::before, .container .form-wrap-s .input .btn:hover .btn-border::after, .container .form-wrap-s .input .btn-click:hover .btn-border::before, .container .form-wrap-s .input .btn-click:hover .btn-border::after {
+    background-color: #000;
+  }
+  .container .form-wrap .input .btn:active, .container .form-wrap .input .btn-click:active, .container .form-wrap-s .input .btn:active, .container .form-wrap-s .input .btn-click:active {
+    background-color: #fff;
+  }
+  .container .form-wrap .input .btn:active::before, .container .form-wrap .input .btn:active::after, .container .form-wrap .input .btn-click:active::before, .container .form-wrap .input .btn-click:active::after, .container .form-wrap-s .input .btn:active::before, .container .form-wrap-s .input .btn:active::after, .container .form-wrap-s .input .btn-click:active::before, .container .form-wrap-s .input .btn-click:active::after {
+    color: #000;
+  }
+  .container .form-wrap .input .btn:active .btn-border, .container .form-wrap .input .btn-click:active .btn-border, .container .form-wrap-s .input .btn:active .btn-border, .container .form-wrap-s .input .btn-click:active .btn-border {
+    border-color: #000;
+  }
+  .container .form-wrap .input .btn:active .btn-border::before, .container .form-wrap .input .btn:active .btn-border::after, .container .form-wrap .input .btn-click:active .btn-border::before, .container .form-wrap .input .btn-click:active .btn-border::after, .container .form-wrap-s .input .btn:active .btn-border::before, .container .form-wrap-s .input .btn:active .btn-border::after, .container .form-wrap-s .input .btn-click:active .btn-border::before, .container .form-wrap-s .input .btn-click:active .btn-border::after {
+    background-color: #fff;
+  }
+  .container .form-wrap .input input, .container .form-wrap-s .input input {
+    margin: .5vw 0;
+    height: 5vw;
+    font-size: 1.5vw;
+    background-color: #fff;
+    border-radius: 18%/100%;
+  }
+  .container .form-wrap .input .num-wrap .num, .container .form-wrap-s .input .num-wrap .num {
+    width: 78%;
+  }
+  .container .form-wrap .input .num-wrap .num input[type=number], .container .form-wrap-s .input .num-wrap .num input[type=number] {
+    margin: 0;
+    border-radius: 18%/100%;
+  }
+  .container .form-wrap .input .num-wrap .change, .container .form-wrap-s .input .num-wrap .change {
+    width: 18%;
+    margin-left: 1.2vw;
+  }
+  .container .form-wrap .input .num-wrap .change .num_submit, .container .form-wrap .input .num-wrap .change .num_change, .container .form-wrap-s .input .num-wrap .change .num_submit, .container .form-wrap-s .input .num-wrap .change .num_change {
+    margin: 0;
+    width: 5vw;
+    height: 5vw;
+  }
+  .container .form-wrap .input .num-wrap .change .num_submit:active, .container .form-wrap .input .num-wrap .change .num_change:active, .container .form-wrap-s .input .num-wrap .change .num_submit:active, .container .form-wrap-s .input .num-wrap .change .num_change:active {
+    background-color: #aaa;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  .container .form-wrap-s .input {
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .container .form-wrap-s .input .options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: scroll;
+  }
+  .container .option-bg-wrap .option-bg {
+    width: 40vw;
+    height: 40vw;
+    top: 50%;
+    left: 30%;
+  }
+  .container .option-bg-wrap .option-bg .cover .name span {
+    font-size: 6vw;
+    line-height: 20vw;
+  }
+  footer {
+    opacity: .1;
   }
 }
 /*# sourceMappingURL=RWD.css.map */
