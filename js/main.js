@@ -1,4 +1,11 @@
 $(document).ready(function () {
+    $(window).resize(function () { 
+        var x =document.body.clientWidth;
+        var y =document.body.clientHeight;
+        console.log(x,y);
+        $(".container").width(x);
+        $(".container").height(y);
+    });
     // 轉盤開始<->停止
     var click;
     click=true;
