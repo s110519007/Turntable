@@ -715,7 +715,7 @@ $s-width:767px;
     }
 }
 //phone landscape
-@media screen and (max-width:849px) and (orientation: landscape), (max-height:500px){
+@media screen and (max-width:849px) and (orientation: landscape){
     .container{
         display: none;
     }
