@@ -575,4 +575,8 @@ footer {
   opacity: .2;
   font-size: 12px;
 }
+
+.container-cover {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */
