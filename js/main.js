@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(wimdow).resize(function () { 
+    $(window).resize(function () { 
         $('body').height($('body')[0].clientHeight);
     });
     // 轉盤開始<->停止
